@@ -11,14 +11,11 @@ public class CardController : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        // Texture2D texture = Resources.Load("cards/c03") as Texture2D;
-        // Image card = Instantiate(cardImagePrefab);
-        // card.sprite = Sprite.Create(texture, new Rect(0,0,200,300), Vector2.zero);
-        // card.transform.SetParent(cardContent.transform);
         Object[] textures = Resources.LoadAll("cards");
         foreach (Object obj in textures)
         {
 			Texture2D texture = obj as Texture2D;
+			// 多分metaファイル？を弾く
 			if (texture == null){
 				continue;
 			}
