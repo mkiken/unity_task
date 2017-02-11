@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class TabController : MonoBehaviour {
 	public void OnPressChatTab(){
-		PopupController.Show();
+		PopupController.Show("Chat View");
+	}
+	public void OnPressCardTab(){
+		PopupController.Show("Card View");
 	}
 
 }
