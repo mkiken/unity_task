@@ -8,6 +8,8 @@ public class CardController : MonoBehaviour
     public Image cardImagePrefab;
     public GameObject cardContent;
 
+	public Scrollbar scroll;
+
 	private List<Image> imageList = new List<Image>();
 
 	private bool isSmall = false;
@@ -31,6 +33,7 @@ public class CardController : MonoBehaviour
             card.transform.SetParent(cardContent.transform);
 			imageList.Add(card);
         }
+		initScrollBar();
     }
 
 	public void onSizeChangeButton(){
@@ -38,5 +41,10 @@ public class CardController : MonoBehaviour
 		int size = isSmall ? LARGE_SIZE : SMALL_SIZE;
         layout.cellSize = new Vector2(size, size);
 		isSmall = !isSmall;
+		// initScrollBar();
     }
+
+	public void initScrollBar(){
+		scroll.value = 1.0f;
+	}
 }
