@@ -11,6 +11,7 @@ public class TabController : MonoBehaviour {
 		PopupController.Show("Card View");
 	}
 	public void OnPressGachaTab(){
+		// SceneManager.LoadScene("Gacha", LoadSceneMode.Additive);
 		SceneManager.LoadScene("Gacha");
 	}
 
