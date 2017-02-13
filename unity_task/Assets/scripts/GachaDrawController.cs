@@ -30,6 +30,8 @@ public class GachaDrawController : MonoBehaviour
         Image card = Instantiate(cardImagePrefab);
         card.sprite = Sprite.Create(tex, new Rect(0, 0, 200, 300), Vector2.zero);
         card.transform.SetParent(gachaResult.transform);
+        card.transform.localScale = gachaResult.transform.localScale;
+
 
 		// 5秒後にシーン移動
 		Invoke("goGachaScene", 5.0f);
