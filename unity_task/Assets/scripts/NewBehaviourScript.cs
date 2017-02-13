@@ -8,7 +8,7 @@ public RectTransform rect;
 public RectTransform newrect;
 	// Use this for initialization
 	void Update () {
-		newrect.sizeDelta= rect.sizeDelta;
+		newrect.sizeDelta= rect.sizeDelta + 30 * Vector2.one;
 	}
 	
 }
