@@ -25,7 +25,8 @@ public class PageControl : MonoBehaviour
 			{
 				Toggle indicator = Instantiate(indicatorBase) as Toggle;
 				indicator.gameObject.SetActive(true);
-				indicator.transform.SetParent(indicatorBase.transform.parent);
+				// indicator.transform.SetParent(indicatorBase.transform.parent);
+				indicator.transform.SetParent(transform);
 				indicator.transform.localScale = indicatorBase.transform.localScale;
 				indicator.isOn = false;
 				indicators.Add(indicator);
