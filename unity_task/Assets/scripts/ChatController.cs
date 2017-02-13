@@ -13,6 +13,7 @@ public class ChatController : MonoBehaviour {
 		var newText = textObject.GetComponentInChildren<Text>();
 		newText.text = inputField.text;
 		textObject.transform.SetParent(chatContents.transform);
+		textObject.transform.localScale = chatContents.transform.localScale;
 		inputField.text = "";
 
 	}

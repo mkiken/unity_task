@@ -31,7 +31,8 @@ public class CardController : MonoBehaviour
             Image card = Instantiate(cardImagePrefab);
             card.sprite = Sprite.Create(texture as Texture2D, new Rect(0, 0, 200, 300), Vector2.zero);
             card.transform.SetParent(cardContent.transform);
-			imageList.Add(card);
+			card.transform.localScale = cardContent.transform.localScale;
+            imageList.Add(card);
         }
 		initScrollBar();
     }
