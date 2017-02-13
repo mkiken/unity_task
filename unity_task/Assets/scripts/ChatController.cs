@@ -6,12 +6,13 @@ using UnityEngine.UI;
 public class ChatController : MonoBehaviour {
 	public InputField inputField;
 	public GameObject chatContents;
-    public Text prefabChatText;
+    public GameObject prefabChatText;
 
 	public void onSubmitClick(){
-		Text newText = Instantiate(prefabChatText);
+		GameObject textObject = Instantiate(prefabChatText);
+		var newText = textObject.GetComponentInChildren<Text>();
 		newText.text = inputField.text;
-		newText.transform.SetParent(chatContents.transform);
+		textObject.transform.SetParent(chatContents.transform);
 		inputField.text = "";
 
 	}
